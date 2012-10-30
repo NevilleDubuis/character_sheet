@@ -19,7 +19,6 @@ group :development, :test do
   gem 'shoulda-matchers'
   gem 'factory_girl_rails'
   gem 'factory-girl-matchers', '>= 1.0.0.rc1'
-  gem 'ruby-debug19', require: 'ruby-debug'
   gem 'pry-rails'
   gem 'pry-remote'
 end
