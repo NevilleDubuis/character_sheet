@@ -1,0 +1,2 @@
+module Warhammer40ksHelper
+end
