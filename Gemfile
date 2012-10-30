@@ -1,40 +1,38 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.6'
-
-# Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
-
 gem 'sqlite3'
+gem 'jquery-rails'
+gem 'devise'
+gem 'twitter-bootstrap-rails'
 
 
-# Gems used only for assets and not required
-# in production environments by default.
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
-
-  # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer', :platforms => :ruby
-
   gem 'uglifier', '>= 1.0.3'
 end
 
-gem 'jquery-rails'
-gem 'devise'
-gem "twitter-bootstrap-rails"
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'spork'
+  gem 'shoulda-matchers'
+  gem 'factory_girl_rails'
+  gem 'factory-girl-matchers', '>= 1.0.0.rc1'
+  gem 'ruby-debug19', require: 'ruby-debug'
+  gem 'pry-rails'
+  gem 'pry-remote'
+end
 
-# To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
+group :guard do
+  gem 'guard'
 
-# To use Jbuilder templates for JSON
-# gem 'jbuilder'
+  gem 'guard-bundler'
+  gem 'guard-rspec'
+  gem 'guard-spork'
 
-# Use unicorn as the app server
-# gem 'unicorn'
+  gem 'rb-readline', platforms: :ruby
 
-# Deploy with Capistrano
-# gem 'capistrano'
-
-# To use debugger
-# gem 'debugger'
+  gem 'growl',        require: false
+  gem 'rb-fsevent',   require: false
+end
