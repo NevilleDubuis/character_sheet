@@ -12,6 +12,16 @@
  *= require_tree .
  */
 
- .row {
+.row {
   margin-top: 50px;
- }
+}
+
+.left-col {
+  float: left;
+  width: 50%;
+}
+
+.right-col {
+  float: right;
+  width: 50%;
+}

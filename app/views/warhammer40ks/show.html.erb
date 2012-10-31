@@ -1,3 +1,17 @@
 <div class="page-header">
   <h1><%=t '.title', :default => @card.name %></h1>
 </div>
+<div class="genral-info">
+  <div class="left-col">
+    <div class="field" id="character_name">
+      <span class="title">Nom du personnage</span>
+      <span class="value" id="character_name"><%= @card_details.character_name || '' %>
+    </div>  
+  </div>
+  <div class="right-col">
+    <div class="field" id="player_name">
+      <span class="title">Nom du joueur</span>
+      <span class="value" id="player_name"><%= @card_details.player_name || '' %>
+    </div> 
+  </div>
+</div> 
