@@ -16,10 +16,10 @@ class CardsController < ApplicationController
   # GET /cards/1.json
   def show
     @card= current_user.cards.where(:id => params[:id]).first!
-    @card_details = eval(@card.type.name).find(@card.object_id)
+    @card_details = eval(@card.type.classname).find(@card.object_id)
 
     respond_to do |format|
-      format.html { render template: "#{@card.type.name.downcase.pluralize}/show" }
+      format.html { render template: "#{@card.type.classname.downcase.pluralize}/show" }
       format.json { render json: @card }
     end
   end
@@ -45,7 +45,7 @@ class CardsController < ApplicationController
   def create
     @card = Card.new(params[:card])
     @card.user_id = current_user.id
-    @card.object_id = eval(@card.type.name).create
+    @card.object_id = eval(@card.type.classname).create
 
     respond_to do |format|
       if @card.save
