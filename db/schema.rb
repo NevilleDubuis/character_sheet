@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121031192334) do
+ActiveRecord::Schema.define(:version => 20121031181553) do
 
   create_table "cards", :force => true do |t|
     t.integer  "user_id"
@@ -48,15 +48,13 @@ ActiveRecord::Schema.define(:version => 20121031192334) do
   add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true
 
   create_table "warhammer40ks", :force => true do |t|
-    t.integer  "age"
-    t.datetime "created_at",     :null => false
-    t.datetime "updated_at",     :null => false
+    t.string   "name"
     t.string   "character_name"
     t.string   "player_name"
     t.string   "native_world"
     t.string   "carrier_plan"
     t.string   "promotion"
-    t.string   "diviniation"
+    t.string   "divination"
     t.string   "specifics"
     t.string   "gender"
     t.string   "stature"
@@ -65,6 +63,9 @@ ActiveRecord::Schema.define(:version => 20121031192334) do
     t.string   "skin_color"
     t.string   "hair"
     t.string   "eyes"
+    t.string   "age"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
   end
 
 end

@@ -1,17 +1,71 @@
-<div class="page-header">
-  <h1><%=t '.title', :default => @card.name %></h1>
-</div>
+<h1><%=t '.title', :default => @card.name %></h1>
+
 <div class="genral-info">
+  <div class="page-header">
+    <h2>information générale</h2>
+  </div>
   <div class="left-col">
     <div class="field" id="character_name">
-      <span class="title">Nom du personnage</span>
-      <span class="value" id="character_name"><%= @card_details.character_name || '' %>
+      <span class="title">Nom du personnage</span><br />
+      <div class="value" id="character_name"><%= @card_details.character_name || '' %></div>
+    </div>
+    <div class="field" id="native_world">
+      <span class="title">Monde d'origine</span><br />
+      <div class="value" id="native_world"><%= @card_details.native_world || '' %></div>
+    </div>
+    <div class="field" id="carrier_plan">
+      <span class="title">Plan de carrière</span><br />
+      <div class="value" id="carrier_plan"><%= @card_details.carrier_plan || '' %></div>
+    </div>
+    <div class="field" id="gender">
+      <span class="title">Sexe</span><br />
+      <div class="value" id="gender"><%= @card_details.gender || '' %></div>
+    </div>
+    <div class="field" id="size">
+      <span class="title">Taille</span><br />
+      <div class="value" id="size"><%= @card_details.size || '' %></div>
+    </div>
+    <div class="field" id="skin_color">
+      <span class="title">Couleur de peau</span><br />
+      <div class="value" id="skin_color"><%= @card_details.skin_color || '' %></div>
+    </div>
+    <div class="field" id="hair">
+      <span class="title">Cheveux</span><br />
+      <div class="value" id="hair"><%= @card_details.hair || '' %></div>
+    </div>
+    <div class="field" id="age">
+      <span class="title">Age</span><br />
+      <div class="value" id="age"><%= @card_details.age || '' %></div>
     </div>  
   </div>
   <div class="right-col">
     <div class="field" id="player_name">
-      <span class="title">Nom du joueur</span>
-      <span class="value" id="player_name"><%= @card_details.player_name || '' %>
+      <span class="title">Nom du joueur</span><br />
+      <div class="value" id="player_name"><%= @card_details.player_name || '' %></div>
+    </div>
+    <div class="field" id="divination">
+      <span class="title">Divination</span><br />
+      <div class="value" id="divination"><%= @card_details.divination || '' %></div>
+    </div>
+    <div class="field" id="promotion">
+      <span class="title">Promotion</span><br />
+      <div class="value" id="promotion"><%= @card_details.promotion || '' %></div>
+    </div>
+    <div class="field" id="stature">
+      <span class="title">Stature</span><br />
+      <div class="value" id="stature"><%= @card_details.stature || '' %></div>
+    </div>
+    <div class="field" id="weight">
+      <span class="title">Poids</span><br />
+      <div class="value" id="weight"><%= @card_details.weight || '' %></div>
+    </div>
+    <div class="field" id="specifics">
+      <span class="title">Spécificités</span><br />
+      <div class="value" id="specifics"><%= @card_details.specifics || '' %></div>
+    </div>
+    <div class="field" id="eyes">
+      <span class="title">Yeux</span><br />
+      <div class="value" id="eyes"><%= @card_details.eyes || '' %></div>
     </div> 
   </div>
 </div> 

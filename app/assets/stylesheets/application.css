@@ -12,6 +12,10 @@
  *= require_tree .
  */
 
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+}
+
 .row {
   margin-top: 50px;
 }
@@ -24,4 +28,27 @@
 .right-col {
   float: right;
   width: 50%;
+}
+
+.value {
+  padding-top: 6px;
+  height: 33px;
+  width: 370px;
+  text-align: right;
+  font-size: 14px;
+}
+
+.left-col > div > .value {
+  padding-right: 20px;
+}
+
+.title {
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.input-value {
+  width: 363px;
+  text-align: right;
 }
