@@ -15,7 +15,7 @@ function create_input() {
     $(this).parent('div').children('input').focus();
   });
 
-   $('input').blur(function () {
+   $('.input-value').blur(function () {
      if ($(this).parent('div').children('.value').html() != $(this).val()) {
        $(this).parent('div').children('.value').html($(this).val());
        //ajax_save($(this).parent('span').attr('class'), $(this).val(), $(this).parents('div').attr('id') );
@@ -24,7 +24,7 @@ function create_input() {
      $(this).parent('div').children('.value').show();
   });
 
-  $('input').bind('keypress', function(e) {
+  $('.input-value').bind('keypress', function(e) {
     var code = (e.keyCode ? e.keyCode : e.which);
     if(code == 13) { //Enter keycode
       $(this).blur();
