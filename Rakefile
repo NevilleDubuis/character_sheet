@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Fiche::Application.load_tasks
+CharacterSheet::Application.load_tasks
